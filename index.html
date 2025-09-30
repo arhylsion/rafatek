@@ -21,11 +21,11 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="text-gray-900">
     <div class="relative z-10">
 
         <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-colors duration-500">
@@ -41,7 +41,8 @@
                             <a href="#about"
                                 class="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">About</a>
                             <a href="blog-news/index.html"
-                                class="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog & News</a>
+                                class="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Blog
+                                & News</a>
                             <a href="#services"
                                 class="text-white hover:text-gray-300 px-3 py-2 rounded-md text-sm font-medium transition-colors">Layanan</a>
                             <a href="#paket"
@@ -75,19 +76,23 @@
                         class="p-2 text-white hover:text-gray-300 focus:outline-none">
                         <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
                         </svg>
                     </button>
                 </div>
                 <div class="mt-4 space-y-4">
                     <a href="#about"
-                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Tentang Kami</a>
+                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Tentang
+                        Kami</a>
                     <a href="blog-news/index.html"
-                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Blog & News</a>
+                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Blog
+                        & News</a>
                     <a href="#services"
                         class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Layanan</a>
                     <a href="#paket"
-                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Paket Internet</a>
+                        class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">Paket
+                        Internet</a>
                     <a href="#faq"
                         class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md text-base font-medium">FAQ</a>
                     <a href="#contact"
@@ -114,16 +119,17 @@
                         <a href="#contact"
                             class="bg-white text-black px-8 py-3 rounded-md font-medium hover:bg-gray-200 transition duration-300">Mulai</a>
                         <a href="#services"
-                            class="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-gray-100 hover:text-black transition duration-300">Layanan Kami</a>
+                            class="border-2 border-white text-white px-8 py-3 rounded-md font-medium hover:bg-gray-100 hover:text-black transition duration-300">Layanan
+                            Kami</a>
                     </div>
                 </div>
                 <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
                     <span class="dot w-3 h-3 rounded-full bg-white opacity-100"></span>
                 </div>
             </section>
-            
-            <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 bg-white reveal">
-                <div class="max-w-7xl mx-auto">
+
+            <section id="about" class="relative py-20 px-4 sm:px-6 lg:px-8 reveal">
+                <div class="relative z-10 max-w-7xl mx-auto">
                     <div class="text-center mb-16 reveal">
                         <h2 class="text-4xl font-bold mb-4 text-black">
                             Tentang <span class="border-b-4 border-black">Kami</span>
@@ -136,10 +142,11 @@
                         <div class="reveal">
                             <h3 class="text-3xl font-bold mb-6 text-black">Cerita Kami</h3>
                             <p class="text-gray-700 mb-6">
-                                Rafatek memulai awal karir sebagai internet service provider and IT konsultan 
+                                Rafatek memulai awal karir sebagai internet service provider and IT konsultan
                             </p>
                             <p class="text-gray-700 mb-8">
-                                Kami berusaha untuk terus menjadi perusahaan teknologi terdepan yang berkomitmen memberikan solusi terbaik untuk bisnis Anda.
+                                Kami berusaha untuk terus menjadi perusahaan teknologi terdepan yang berkomitmen
+                                memberikan solusi terbaik untuk bisnis Anda.
                             </p>
                             <div class="grid grid-cols-2 gap-4">
                                 <div class="border-l-4 border-black pl-4">
@@ -154,80 +161,110 @@
                         </div>
                         <div class="relative reveal">
                             <div class="bg-gray-200 h-96 w-full rounded-lg overflow-hidden">
-                                <img src="assets/rafatekbg.jpeg"
-                                    alt="Our Team" class="h-full w-full object-cover">
+                                <img src="assets/rafatekbg.jpeg" alt="Our Team" class="h-full w-full object-cover">
                             </div>
                             <div id="vision-mission-box"
                                 class="absolute -bottom-6 -left-6 bg-blue-900 text-white p-6 rounded-lg shadow-lg w-3/4">
                                 <div class="slide-text active">
                                     <h4 class="text-xl font-bold mb-2">Misi Kami</h4>
-                                    <p class="text-blue-200">Berkomitmen memberikan solusi terbaik untuk bisnis Anda dalam penyediaan layanan yang terbaik.</p>
+                                    <p class="text-blue-200">Berkomitmen memberikan solusi terbaik untuk bisnis Anda
+                                        dalam penyediaan layanan yang terbaik.</p>
                                 </div>
                                 <div class="slide-text hidden">
                                     <h4 class="text-xl font-bold mb-2">Visi Kami</h4>
-                                    <p class="text-blue-200">Menjadi mitra teknologi terpercaya yang mendorong transformasi digital dan inovasi bisnis di Indonesia.</p>
+                                    <p class="text-blue-200">Menjadi mitra teknologi terpercaya yang mendorong
+                                        transformasi digital dan inovasi bisnis di Indonesia.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
-            <section id="services" class="relative py-20 bg-gray-50 reveal">
-                <div
-                    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center bg-white rounded-2xl shadow overflow-hidden">
-                    <div id="services-slides" class="w-1/2 relative overflow-hidden">
-                        <div class="flex transition-transform duration-700">
-                            <div class="min-w-full"><img src="assets/ISP.png"
-                                    class="object-cover w-full h-full" alt="Service 1"></div>
-                            <div class="min-w-full"><img src="assets/IT Konsultan.png"
-                                    class="object-cover w-full h-full" alt="Service 2"></div>
-                            <div class="min-w-full"><img src="assets/Software Developer.png"
-                                    class="object-cover w-full h-full" alt="Service 3"></div>
-                        </div>
+
+            <section id="services" class="relative py-20 reveal">
+                <div class="relative z-10">
+                    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+                        <h2 class="text-4xl sm:text-5xl font-extrabold text-gray-900 leading-tight">Layanan Kami</h2>
+                        <p class="mt-4 text-xl text-gray-600">
+                            Kami menyediakan solusi teknologi terintegrasi untuk mendukung pertumbuhan bisnis Anda.
+                        </p>
                     </div>
-                    <div class="flex flex-col justify-center items-center px-6">
-                        <div class="flex flex-col space-y-4">
-                            <button class="indicator w-1 h-8 bg-gray-400 rounded transition-all" data-index="0"></button>
-                            <button class="indicator w-1 h-8 bg-gray-400 rounded transition-all" data-index="1"></button>
-                            <button class="indicator w-1 h-8 bg-gray-400 rounded transition-all" data-index="2"></button>
+
+                    <div
+                        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center bg-white rounded-2xl shadow overflow-hidden p-6">
+
+                        <div id="services-slides" class="w-full md:w-7/12 relative overflow-hidden md:h-[500px]">
+                            <div class="flex transition-transform duration-700 h-full">
+                                <div class="min-w-full"><img src="assets/ISP.png" class="object-contain w-full h-full p-4"
+                                        alt="Service 1"></div>
+                                <div class="min-w-full"><img src="assets/IT Konsultan.png"
+                                        class="object-contain w-full h-full p-4" alt="Service 2"></div>
+                                <div class="min-w-full"><img src="assets/Software Developer.png"
+                                        class="object-contain w-full h-full p-4" alt="Service 3"></div>
+                            </div>
                         </div>
-                    </div>
-                    <div id="services-texts" class="w-1/2 relative overflow-hidden">
-                        <div class="flex transition-transform duration-700">
-                            <div class="min-w-full p-10">
-                                <h3 class="text-3xl font-bold mb-4 text-gray-900 overflow-hidden">Internet Service Provider</h3>
-                                <p class="text-gray-600 mb-6">Koneksi internet berkecepatan tinggi dengan teknologi fiber optic terbaru.</p>
+
+                        <div class="flex flex-col justify-center items-center px-6 py-6 md:py-0">
+                            <div class="flex flex-row space-x-2 md:flex-col md:space-x-0 md:space-y-4">
+                                <button class="indicator w-8 h-1 md:w-1 md:h-8 bg-gray-400 rounded transition-all"
+                                    data-index="0"></button>
+                                <button class="indicator w-8 h-1 md:w-1 md:h-8 bg-gray-400 rounded transition-all"
+                                    data-index="1"></button>
+                                <button class="indicator w-8 h-1 md:w-1 md:h-8 bg-gray-400 rounded transition-all"
+                                    data-index="2"></button>
                             </div>
-                            <div class="min-w-full p-10">
-                                <h3 class="text-3xl font-bold mb-4 text-gray-900 overflow-hidden">IT Consultant</h3>
-                                <p class="text-gray-600 mb-6">Konsultasi teknologi informasi profesional untuk optimasi bisnis.
-                                </p>
-                            </div>
-                            <div class="min-w-full p-10">
-                                <h3 class="text-3xl font-bold mb-4 text-gray-900 overflow-hidden">Software Developer</h3>
-                                <p class="text-gray-600 mb-6">Pengembangan aplikasi dan software custom sesuai kebutuhan bisnis.</p>
+                        </div>
+
+                        <div id="services-texts" class="w-full md:w-5/12 relative overflow-hidden">
+                            <div class="flex transition-transform duration-700">
+                                <div class="min-w-full p-10">
+                                    <h3 class="text-3xl font-bold mb-4 text-gray-900">Internet Service Provider</h3>
+                                    <div class="w-12 h-1 bg-blue-500 rounded mb-6"></div>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">Koneksi internet berkecepatan tinggi
+                                        dengan teknologi fiber optic terbaru, dirancang untuk mendukung kebutuhan bisnis dan
+                                        personal Anda.</p>
+                                </div>
+                                <div class="min-w-full p-10">
+                                    <h3 class="text-3xl font-bold mb-4 text-gray-900">IT Consultant</h3>
+                                    <div class="w-12 h-1 bg-blue-500 rounded mb-6"></div>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">Konsultasi teknologi informasi profesional
+                                        untuk optimasi bisnis. Kami membantu Anda merancang strategi TI yang efisien dan
+                                        aman.</p>
+                                </div>
+                                <div class="min-w-full p-10">
+                                    <h3 class="text-3xl font-bold mb-4 text-gray-900">Software Developer</h3>
+                                    <div class="w-12 h-1 bg-blue-500 rounded mb-6"></div>
+                                    <p class="text-gray-600 mb-6 leading-relaxed">Pengembangan aplikasi dan software kustom
+                                        sesuai kebutuhan bisnis Anda. Dari aplikasi mobile hingga sistem manajemen
+                                        terintegrasi.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <section class="bg-blue-900 text-white py-6 px-4 reveal">
                 <div class="max-w-7xl mx-auto flex items-center justify-between">
-                    <p class="text-lg font-medium"><marquee behavior="smooth" direction="">📢 Pengumuman: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim repudiandae quod harum repellendus fugiat esse obcaecati modi, rerum possimus nesciunt qui, error quas excepturi dolorum voluptatibus ipsum iusto officia! Tempora.-</marquee></p>
+                    <p class="text-lg font-medium">
+                        <marquee behavior="smooth" direction="">📢 Pengumuman: Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Enim repudiandae quod harum repellendus fugiat esse obcaecati modi, rerum
+                            possimus nesciunt qui, error quas excepturi dolorum voluptatibus ipsum iusto officia!
+                            Tempora.-</marquee>
+                    </p>
                     <a href="#paket" class="bg-white text-blue-900 px-4 py-2 rounded hover:bg-gray-100">Informasi+</a>
                 </div>
             </section>
-            
-            <section id="paket" class="py-20 bg-gray-50">
-                <div class="max-w-7xl mx-auto px-6 text-center reveal">
+
+            <section id="paket" class="relative py-20">
+                <div class="relative z-10 max-w-7xl mx-auto px-6 text-center reveal">
                     <h2 class="text-4xl font-bold text-blue-900 mb-12">Paket Internet</h2>
                     <div class="grid md:grid-cols-3 gap-8">
                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition reveal">
                             <h3 class="text-2xl font-semibold mb-4">Basic</h3>
                             <p class="text-gray-600 mb-6">Cocok untuk penggunaan ringan</p>
-                            <p class="text-4xl font-bold mb-6">Rp175.000<span class="text-lg text-gray-600">/bulan</span></p>
+                            <p class="text-4xl font-bold mb-6">Rp175.000<span
+                                    class="text-lg text-gray-600">/bulan</span></p>
                             <ul class="space-y-3 text-gray-700 mb-6 text-left">
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>10 Mbps</li>
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Unlimited Quota</li>
@@ -244,7 +281,8 @@
                                 Price</span>
                             <h3 class="text-2xl font-semibold mb-4">Advance</h3>
                             <p class="text-gray-600 mb-6">Ideal untuk keluarga & streaming</p>
-                            <p class="text-4xl font-bold mb-6">Rp220.000<span class="text-lg text-gray-600">/bulan</span></p>
+                            <p class="text-4xl font-bold mb-6">Rp220.000<span
+                                    class="text-lg text-gray-600">/bulan</span></p>
                             <ul class="space-y-3 text-gray-700 mb-6 text-left">
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>20 Mbps</li>
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Unlimited Quota</li>
@@ -257,7 +295,8 @@
                         <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition reveal">
                             <h3 class="text-2xl font-semibold mb-4">Executive</h3>
                             <p class="text-gray-600 mb-6">Kecepatan maksimal tanpa batas</p>
-                            <p class="text-4xl font-bold mb-6">Rp300.000<span class="text-lg text-gray-600">/bulan</span></p>
+                            <p class="text-4xl font-bold mb-6">Rp300.000<span
+                                    class="text-lg text-gray-600">/bulan</span></p>
                             <ul class="space-y-3 text-gray-700 mb-6 text-left">
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>30 Mbps</li>
                                 <li><i class="fa-solid fa-check text-green-600 mr-2"></i>Unlimited Quota</li>
@@ -270,44 +309,53 @@
                     </div>
                 </div>
             </section>
-            
-            <section id="faq" class="py-20 bg-white">
-                <div class="max-w-7xl mx-auto px-6 reveal">
+
+            <section id="faq" class="relative py-20">
+                <div class="relative z-10 max-w-7xl mx-auto px-6 reveal">
                     <h2 class="text-4xl font-bold text-blue-900 mb-12 text-center">Frequently Asked Questions</h2>
                     <div class="grid md:grid-cols-2 gap-8">
                         <div>
                             <div class="mb-6">
                                 <button
-                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apa saja paket internet yang tersedia?
+                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apa
+                                    saja paket internet yang tersedia?
                                 </button>
-                                <div class="faq-content mt-2 px-4 text-gray-700">Kami menyediakan paket Basic, Advance, dan Executive sesuai kebutuhan pengguna.</div>
+                                <div class="faq-content mt-2 px-4 text-gray-700">Kami menyediakan paket Basic, Advance,
+                                    dan Executive sesuai kebutuhan pengguna.</div>
                             </div>
                             <div class="mb-6">
                                 <button
-                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apakah ada biaya instalasi?
+                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apakah
+                                    ada biaya instalasi?
                                 </button>
-                                <div class="faq-content mt-2 px-4 text-gray-700">Biaya instalasi dibayarkan dalam pembayaran awal pemasangan</div>
+                                <div class="faq-content mt-2 px-4 text-gray-700">Biaya instalasi dibayarkan dalam
+                                    pembayaran awal pemasangan</div>
                             </div>
                         </div>
                         <div>
                             <div class="mb-6">
                                 <button
-                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apakah ada batasan kouta?
+                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Apakah
+                                    ada batasan kouta?
                                 </button>
-                                <div class="faq-content mt-2 px-4 text-gray-700">Semua paket internet kami tanpa batasan kuota alias <b>Unlimited</b>.</div>
+                                <div class="faq-content mt-2 px-4 text-gray-700">Semua paket internet kami tanpa batasan
+                                    kuota alias <b>Unlimited</b>.</div>
                             </div>
                             <div class="mb-6">
                                 <button
-                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Bagaimana cara bayar tagihan?
+                                    class="w-full text-left font-semibold py-3 px-4 bg-gray-100 rounded-lg toggle">Bagaimana
+                                    cara bayar tagihan?
                                 </button>
-                                <div class="faq-content mt-2 px-4 text-gray-700">Pembayaran bisa via transfer bank, e-wallet, atau auto
-                                    debit, juga bisa dengan mengunjungi kantor pusat kami dialamat yang tertera di kontak.</div>
+                                <div class="faq-content mt-2 px-4 text-gray-700">Pembayaran bisa via transfer bank,
+                                    e-wallet, atau auto
+                                    debit, juga bisa dengan mengunjungi kantor pusat kami dialamat yang tertera di
+                                    kontak.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            
+
             <div class="fixed bottom-6 right-6 flex flex-col space-y-4 z-50">
                 <div id="wa-container" class="flex items-center">
                     <div id="wa-popup"
@@ -320,14 +368,14 @@
                     </a>
                 </div>
             </div>
-            
+
             <button id="scrollTopBtn"
                 class="fixed bottom-24 right-6 p-4 bg-blue-900 text-white rounded-full shadow-lg hidden z-50 transition-transform hover:scale-110">
                 <i class="fas fa-arrow-up"></i>
             </button>
-            
-            <section id="contact" class="py-20 bg-gray-50 reveal">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <section id="contact" class="relative py-20 reveal">
+                <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="text-center mb-12 reveal">
                         <h2 class="text-4xl font-bold text-gray-900 mb-4">Hubungi <span
                                 class="border-b-4 border-blue-900">Kami</span>
@@ -356,7 +404,7 @@
                     </div>
                 </div>
             </section>
-            
+
             <footer class="bg-blue-900 text-white">
                 <div class="container mx-auto px-4 py-12">
                     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -382,7 +430,8 @@
                             <ul class="space-y-2">
                                 <li><a href="#" class="text-indigo-200 hover:text-white">Tentang Kami</a></li>
                                 <li><a href="#" class="text-indigo-200 hover:text-white">Karir</a></li>
-                                <li><a href="blog-news/index.html" class="text-indigo-200 hover:text-white">Blog & News</a></li>
+                                <li><a href="blog-news/index.html" class="text-indigo-200 hover:text-white">Blog &
+                                        News</a></li>
                             </ul>
                         </div>
                         <div>
@@ -416,4 +465,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

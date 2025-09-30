@@ -2,6 +2,25 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    /* background-image: url('assets/ISP.png'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255, 0.9);
+    z-index: -1;
+}
+
 /* Fade-in & Slide-up on scroll animation */
 .reveal {
     opacity: 0;
