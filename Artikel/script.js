@@ -20,10 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let blogPosts = [
         {
             id: 1,
-            title: "Pengembangan web baru untuk situs perusahaan telah selesai!",
+            title: "Company profile untuk situs website PT. Rafa Teknologi Solusi",
             author: "Admin",
             date: "29 September 2025",
-            excerpt: "Web Rafatek dengan ini telah resmi diluncurkan, hal ini menjadi langkah awal untuk tetap mempertahankan konsistensi serta kepercayaan masyarakat, dan keseriusan kami dalam membantu Anda untuk menjalankan bisnis.",
+            excerpt: " menyediakan solusi teknologi terintegrasi untuk mendukung pertumbuhan bisnis Anda.",
             link: "#",
             category: "technology",
             tags: ["software", "development", "inovasi"]

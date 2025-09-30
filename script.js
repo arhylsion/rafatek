@@ -168,3 +168,17 @@ mobileMenuLinks.forEach(link => {
 showHeaderSlide(0);
 showServiceSlide(0);
 showAboutSlide(0);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    if (loaderWrapper) {
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                loaderWrapper.style.opacity = '0';
+                setTimeout(() => {
+                    loaderWrapper.style.display = 'none';
+                }, 700); 
+            }, 1000); 
+        });
+    }
+});
