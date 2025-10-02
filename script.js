@@ -17,13 +17,15 @@ window.addEventListener('scroll', handleScrollAnimation);
 window.addEventListener('load', handleScrollAnimation);
 
 // --- Navbar background change on scroll ---
-const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('bg-blue-900', 'shadow-md', 'bg-opacity-90');
-    } else {
-        navbar.classList.remove('bg-blue-900', 'shadow-md', 'bg-opacity-90');
-    }
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('bg-blue-900', 'shadow-lg');
+    navbar.classList.remove('bg-transparent');
+  } else {
+    navbar.classList.remove('bg-blue-900', 'shadow-lg');
+    navbar.classList.add('bg-transparent');
+  }
 });
 
 // --- Header Slider (Background & Dots) ---
@@ -181,4 +183,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000); 
         });
     }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const loader = document.getElementById("loader-wrapper");
+  loader.style.opacity = "0";
+  setTimeout(() => loader.style.display = "none", 500);
+});
+
+const mapIframe = document.querySelector("iframe");
+window.addEventListener("scroll", () => {
+  if (!mapIframe.src) {
+    mapIframe.src = "https://www.google.com/maps/embed?...";
+  }
 });

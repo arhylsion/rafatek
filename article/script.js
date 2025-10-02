@@ -23,11 +23,12 @@ document.addEventListener('DOMContentLoaded', () => {
             title: "Company profile untuk situs website PT. Rafa Teknologi Solusi",
             author: "Admin",
             date: "29 September 2025",
-            excerpt: " menyediakan solusi teknologi terintegrasi untuk mendukung pertumbuhan bisnis Anda.",
+            excerpt: "Menyediakan solusi teknologi terintegrasi untuk mendukung pertumbuhan bisnis Anda dengan inovasi dan keandalan tinggi.",
             link: "#",
             category: "technology",
-            tags: ["software", "development", "inovasi"]
-        },
+            tags: ["software", "development", "inovasi"],
+            image: "../assets/rafatekbg.jpeg"
+        }
     ];
 
     const likesData = getLocalStorage('blog_likes') || {};
@@ -45,21 +46,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const isLiked = userLikedStatus[post.id] === true;
 
         const card = document.createElement('div');
-        card.className = "bg-white rounded-lg shadow-lg overflow-hidden transform transition hover:scale-105 duration-300 reveal";
+        card.className = "bg-white rounded-2xl shadow-lg overflow-hidden transform transition hover:scale-105 duration-300 reveal group";
         card.setAttribute('data-category', post.category);
         card.innerHTML = `
+            <div class="relative overflow-hidden">
+                <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                <div class="absolute top-4 left-4">
+                    <span class="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase">${post.category}</span>
+                </div>
+            </div>
             <div class="p-6">
-                <span class="bg-blue-500 text-white text-xs font-semibold px-2.5 py-0.5 rounded-full uppercase">${post.category}</span>
-                <h2 class="text-xl font-bold text-gray-800 mt-4 mb-2">${post.title}</h2>
+                <h2 class="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">${post.title}</h2>
                 <p class="text-gray-600 text-sm mb-4">Oleh <span class="font-medium">${post.author}</span> pada ${post.date}</p>
-                <p class="text-gray-700 mb-4">${post.excerpt}</p>
+                <p class="text-gray-700 mb-4 line-clamp-3">${post.excerpt}</p>
                 <div class="flex flex-wrap mb-4">
                     ${tagsHtml}
                 </div>
-                <button class="like-button text-gray-500 hover:text-red-500 transition-colors" data-post-id="${post.id}">
-                    <i class="fa-solid fa-heart ${isLiked ? 'text-red-500' : ''}"></i>
-                    <span class="ml-2">${post.likes}</span>
-                </button>
+                <div class="flex items-center justify-between">
+                    <button class="like-button text-gray-500 hover:text-red-500 transition-colors flex items-center" data-post-id="${post.id}">
+                        <i class="fa-solid fa-heart ${isLiked ? 'text-red-500' : ''}"></i>
+                        <span class="ml-2">${post.likes}</span>
+                    </button>
+                </div>
             </div>
         `;
         return card;
@@ -133,6 +141,40 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     });
     
+    // Filter button functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            // Filter and render posts
+            filterAndSearchPosts();
+        });
+    });
+
+    // Search functionality
+    searchInput.addEventListener('input', filterAndSearchPosts);
+
+    // Scroll animation functionality
+    function handleScrollAnimation() {
+        const reveals = document.querySelectorAll('.reveal');
+        for (let i = 0; i < reveals.length; i++) {
+            const windowHeight = window.innerHeight;
+            const revealTop = reveals[i].getBoundingClientRect().top;
+            const revealPoint = 150;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add('active');
+            } else {
+                reveals[i].classList.remove('active');
+            }
+        }
+    }
+
+    window.addEventListener('scroll', handleScrollAnimation);
+    window.addEventListener('load', handleScrollAnimation);
+
     // Initial rendering
     renderPosts(blogPosts);
 });
