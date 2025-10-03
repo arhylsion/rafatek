@@ -18,14 +18,14 @@ window.addEventListener('load', handleScrollAnimation);
 
 // --- Navbar background change on scroll ---
 window.addEventListener('scroll', () => {
-  const navbar = document.getElementById('navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('bg-blue-900', 'shadow-lg');
-    navbar.classList.remove('bg-transparent');
-  } else {
-    navbar.classList.remove('bg-blue-900', 'shadow-lg');
-    navbar.classList.add('bg-transparent');
-  }
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.add('bg-blue-900', 'shadow-lg');
+        navbar.classList.remove('bg-transparent');
+    } else {
+        navbar.classList.remove('bg-blue-900', 'shadow-lg');
+        navbar.classList.add('bg-transparent');
+    }
 });
 
 // --- Header Slider (Background & Dots) ---
@@ -171,29 +171,51 @@ showHeaderSlide(0);
 showServiceSlide(0);
 showAboutSlide(0);
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const loaderWrapper = document.getElementById('loader-wrapper');
     if (loaderWrapper) {
-        window.addEventListener('load', function() {
+        window.addEventListener('load', function () {
             setTimeout(() => {
                 loaderWrapper.style.opacity = '0';
                 setTimeout(() => {
                     loaderWrapper.style.display = 'none';
-                }, 700); 
-            }, 1000); 
+                }, 700);
+            }, 1000);
         });
     }
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const loader = document.getElementById("loader-wrapper");
-  loader.style.opacity = "0";
-  setTimeout(() => loader.style.display = "none", 500);
+    const loader = document.getElementById("loader-wrapper");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 500);
 });
 
 const mapIframe = document.querySelector("iframe");
 window.addEventListener("scroll", () => {
-  if (!mapIframe.src) {
-    mapIframe.src = "https://www.google.com/maps/embed?...";
-  }
+    if (!mapIframe.src) {
+        mapIframe.src = "https://www.google.com/maps/embed?...";
+    }
+});
+
+// number counter
+const counters = document.querySelectorAll('.counter');
+const speed = 300;
+
+counters.forEach(counter => {
+    const animate = () => {
+        const value = +counter.getAttribute('data-target');
+        const data = +counter.innerText;
+
+        const increment = value / speed;
+
+        if (data < value) {
+            counter.innerText = Math.ceil(data + increment);
+            setTimeout(animate, 10);
+        } else {
+            counter.innerText = value.toLocaleString();
+        }
+    };
+
+    animate();
 });

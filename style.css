@@ -3,7 +3,6 @@ html {
 }
 
 body {
-    /* background-image: url('assets/ISP.png'); */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -21,7 +20,6 @@ body::before {
     z-index: -1;
 }
 
-/* Fade-in & Slide-up on scroll animation */
 .reveal {
     opacity: 0;
     transform: translateY(20px);
@@ -33,7 +31,6 @@ body::before {
     transform: translateY(0);
 }
 
-/* Smooth slide for header background */
 .header-slide {
     transition: opacity 1.5s ease;
     position: absolute;
@@ -46,25 +43,6 @@ body::before {
     z-index: 1;
 }
 
-/* Smooth slide for About Us (Vision/Mission) box */
-#vision-mission-box .slide-text {
-    transition: opacity 0.8s ease, transform 0.8s ease;
-    position: absolute;
-    width: 100%;
-}
-
-#vision-mission-box .slide-text.hidden {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-#vision-mission-box .slide-text.active {
-    opacity: 1;
-    transform: translateY(0);
-    position: relative;
-}
-
-/* Smooth collapse for FAQ */
 .faq-content {
     transition: max-height 0.4s ease-out, padding 0.4s ease-out;
     max-height: 0;
@@ -74,11 +52,9 @@ body::before {
 
 .faq-content.open {
     max-height: 200px;
-    /* Adjust as needed for content height */
     padding: 0.5rem 1rem;
 }
 
-/* Mobile Menu */
 #mobile-menu {
     transition: transform 0.3s ease-in-out;
     transform: translateX(100%);
