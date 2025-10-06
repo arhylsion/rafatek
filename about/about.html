@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Rafatek</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../assets/rafateklogo.jpeg">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#1e40af',
+                        accent: '#3b82f6',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="text-gray-900 bg-light">
+    <div id="loader-wrapper" class="fixed inset-0 z-[100] flex items-center justify-center bg-blue-900 text-white">
+        <div class="flex flex-col items-center">
+            <div class="relative w-20 h-20 mb-4 animate-pulse">
+                <div class="absolute inset-0 border-2 border-white rounded-full opacity-30"></div>
+                <div class="absolute inset-0 border-2 border-white border-b-transparent rounded-full animate-spin">
+                </div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <i class="fas fa-wifi text-4xl"></i>
+                </div>
+            </div>
+            <p class="text-xl font-medium tracking-wide">Loading...</p>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 bg-blue-900 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <img src="../assets/rafateklogo.jpeg" alt="RAFATEK Logo" class="h-10 w-auto mr-2 rounded">
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="..#home"
+                            class="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">Beranda</a>
+                        <a href="..#services"
+                            class="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">Layanan</a>
+                        <a href="..#paket" class="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">Paket
+                            Internet</a>
+                        <a href="..#faq" class="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">FAQ</a>
+                        <a href="..#contact"
+                            class="text-white hover:text-gray-300 px-3 py-2 text-sm font-medium">Kontak</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-button"
+                        class="p-2 rounded-md text-gray-200 hover:text-white hover:bg-blue-800">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden fixed top-0 right-0 w-64 h-full bg-blue-900 shadow-lg p-6 z-50">
+            <div class="flex justify-end">
+                <button id="mobile-menu-close" class="p-2 text-white hover:text-gray-300">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <div class="mt-4 space-y-4">
+                <a href="..#home"
+                    class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md">Beranda</a>
+                <a href="..#services"
+                    class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md">Layanan</a>
+                <a href="..#paket"
+                    class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md">Paket
+                    Internet</a>
+                <a href="..#faq"
+                    class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md">FAQ</a>
+                <a href="..#contact"
+                    class="block text-white hover:bg-white hover:text-blue-900 px-3 py-2 rounded-md">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Layout -->
+    <div class="container mx-auto px-4 py-28 flex flex-col md:flex-row">
+        <!-- Sidebar -->
+        <aside class="w-full md:w-64 flex-shrink-0 mb-8 md:mb-0 md:mr-8 bg-white rounded-lg shadow-sm p-6 sticky">
+            <h3 class="text-lg font-semibold text-dark mb-4 border-b pb-2">Akses Cepat</h3>
+            <ul class="space-y-3">
+                <li><a href="#story" class="flex items-center text-primary hover:text-secondary"><i
+                            class="fas fa-chevron-right mr-2 text-sm"></i> Tentang Kami</a></li>
+                <li><a href="#visi" class="flex items-center text-gray-600 hover:text-primary"><i
+                            class="fas fa-chevron-right mr-2 text-sm"></i> Visi Kami</a></li>
+                <li><a href="#misi" class="flex items-center text-gray-600 hover:text-primary"><i
+                            class="fas fa-chevron-right mr-2 text-sm"></i> Misi Kami</a></li>
+            </ul>
+            <div class="mt-8">
+                <h3 class="text-lg font-semibold text-dark mb-4 border-b pb-2">Informasi Kontak</h3>
+                <div class="space-y-3 text-gray-600">
+                    <p class="flex items-start"><i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>Ruko Laladon
+                        Grande Jl. Raya Laladon Ruko H, <br>
+                        Ciomas, Bogor, Jawa Barat 16610</p>
+                    <p class="flex items-center"><i class="fas fa-phone-alt mr-3 text-accent"></i>0251-7589950</p>
+                    <p class="flex items-center"><i class="fas fa-envelope mr-3 text-accent"></i>info@rafatek.co.id</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-grow bg-white rounded-lg shadow-sm p-6 md:p-8">
+            <div class="mb-8">
+                <h1 class="text-3xl md:text-4xl font-bold text-dark mb-4">Tentang Rafatek</h1>
+                <p class="text-gray-600 mb-6">Solusi Teknologi Terdepan</p>
+                <div class="h-1 w-20 bg-primary rounded-full"></div>
+            </div>
+
+            <div class="relative rounded-xl overflow-hidden h-64 md:h-80 mb-8">
+                <img src="../assets/rafatekbg.jpeg" alt="TechVision Team" class="w-full h-full object-cover">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 flex items-center justify-center">
+                    <h2 class="text-3xl md:text-4xl font-bold text-white text-center px-4">Solusi Teknologi Terdepan
+                        untuk bisnis <b>Anda</b>.</h2>
+                </div>
+            </div>
+
+            <div class="prose max-w-none">
+                <!-- Our Story -->
+                <h2 id="story" class="text-2xl font-bold text-dark mb-4">Our Story</h2>
+                <p class="text-gray-600 mb-3">
+                    Berdiri pada tahun 2018, Rafatek lahir dari semangat untuk menghadirkan solusi teknologi yang nyata
+                    dan berdampak. Berawal dari tim kecil dengan visi besar, kami memulai perjalanan dengan menyediakan
+                    layanan jaringan dan pengembangan perangkat lunak yang berfokus pada efisiensi dan keandalan.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Seiring waktu, Rafatek berkembang menjadi perusahaan solusi teknologi yang dipercaya oleh berbagai
+                    sektor, mulai dari pendidikan, bisnis, hingga pemerintahan. Kami terus berinovasi untuk menciptakan
+                    layanan yang tidak hanya menjawab kebutuhan saat ini, tetapi juga siap menghadapi tantangan masa
+                    depan.
+                </p>
+                <p class="text-gray-500 italic mb-6">
+                    Founded in 2018, Rafatek was born from a passion to deliver impactful and reliable technology
+                    solutions. Starting as a small team with a big vision, we began our journey by providing network and
+                    software development services focused on efficiency and reliability.
+                </p>
+                <p class="text-gray-500 italic mb-10">
+                    Over the years, Rafatek has grown into a trusted technology solutions provider serving sectors from
+                    education to business and government. We continue to innovate and evolve to create services that not
+                    only meet today’s needs but also anticipate the challenges of tomorrow.
+                </p>
+
+                <!-- Vision -->
+                <h2 id="visi" class="text-2xl font-bold text-dark mb-4 mt-10">Our Vision</h2>
+                <p class="text-gray-600 mb-6">
+                    Menjadi penyedia solusi teknologi terdepan di Indonesia yang mendorong transformasi digital melalui
+                    inovasi, keandalan, dan pelayanan terbaik bagi seluruh klien kami.
+                </p>
+                <p class="text-gray-500 italic mb-10">
+                    To become Indonesia’s leading technology solutions provider, driving digital transformation through
+                    innovation, reliability, and exceptional service for all our clients.
+                </p>
+
+                <!-- Mission -->
+                <h2 id="misi" class="text-2xl font-bold text-dark mb-4 mt-10">Our Mission</h2>
+                <p class="text-gray-600 mb-3">
+                    Kami berkomitmen untuk membantu organisasi dan individu memanfaatkan teknologi secara maksimal
+                    melalui layanan internet, rekayasa jaringan, dan pengembangan perangkat lunak yang modern, efisien,
+                    dan aman.
+                </p>
+                <p class="text-gray-600 mb-6">
+                    Dengan mengutamakan kualitas, kolaborasi, dan inovasi berkelanjutan, Rafatek hadir sebagai mitra
+                    yang andal dalam mewujudkan transformasi digital yang berdaya guna dan berkelanjutan.
+                </p>
+                <p class="text-gray-500 italic mb-3">
+                    We are committed to helping organizations and individuals harness the full potential of technology
+                    through modern, efficient, and secure internet, network engineering, and software development
+                    services.
+                </p>
+                <p class="text-gray-500 italic mb-6">
+                    By prioritizing quality, collaboration, and continuous innovation, Rafatek stands as a reliable
+                    partner in achieving impactful and sustainable digital transformation.
+                </p>
+            </div>
+
+            <div class="bg-primary/5 p-8 rounded-lg border border-primary/10">
+                <h2 class="text-2xl font-bold text-dark mb-4">Achievement</h2>
+                <p class="text-gray-600 mb-6">Kami dengan bangga ingin menunjukkan Pencapaian kami selama menjadi solusi
+                    teknologi bagi masyrakat Indonesia.</p> <a href="#"
+                    class="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-secondary transition font-medium">
+                    Lihat Pencapaian Kami<i class="fas fa-arrow-right ml-2"></i> </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white mt-12">
+        <div class="container mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <img src="../assets/rafateklogo.jpeg" alt="rafateklogo" class="h-12 w-auto rounded">
+                    </div>
+                    <p class="text-indigo-200 mb-4">Solusi Teknologi Terdepan</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-indigo-200 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-indigo-200 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-indigo-200 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/rafatek.co.id/" class="text-indigo-200 hover:text-white"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Perusahaan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-indigo-200 hover:text-white">Karir</a></li>
+                        <li><a href="../achievement/achievement.html" class="text-indigo-200 hover:text-white">Penghargaan</a></li>
+                        <li><a href="../article/artikel.html" class="text-indigo-200 hover:text-white">Artikel</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Layanan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="..#services" class="text-indigo-200 hover:text-white">Internet Service Provider</a>
+                        </li>
+                        <li><a href="..#services" class="text-indigo-200 hover:text-white">IT Konsultan</a></li>
+                        <li><a href="..#services" class="text-indigo-200 hover:text-white">Software Developer</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bantuan</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#faq" class="text-indigo-200 hover:text-white">FAQs</a></li>
+                        <li><a href="#contact" class="text-indigo-200 hover:text-white">Kontak</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-indigo-800 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-indigo-300 mb-4 md:mb-0">© 2025 RAFATEK. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-indigo-300 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-indigo-300 hover:text-white">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

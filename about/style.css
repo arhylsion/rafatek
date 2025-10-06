@@ -1,0 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Smooth fade for loader */
+#loader-wrapper {
+    transition: opacity 0.7s ease, visibility 0.7s ease;
+}
+
+#loader-wrapper.hidden {
+    opacity: 0;
+    visibility: hidden;
+}

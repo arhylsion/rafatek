@@ -178,3 +178,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initial rendering
     renderPosts(blogPosts);
 });
+
+// Loader fade-out
+        window.addEventListener('load', () => {
+            const loader = document.getElementById('loader-wrapper');
+            setTimeout(() => loader.classList.add('hidden'), 700);
+        });
